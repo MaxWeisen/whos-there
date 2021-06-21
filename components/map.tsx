@@ -17,12 +17,7 @@ const screenWidth =
 export default function Maps() {
   return (
     <View style={styles.container}>
-      <MapView 
-        style={styles.map}
-        provider="google"
-      >
-
-      </MapView>
+      <MapView style={styles.map} provider="google"></MapView>
     </View>
   );
 }
@@ -35,6 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   map: {
+    flex: 1,
     width: screenWidth,
     height: screenHeight,
     borderRadius: 16,
