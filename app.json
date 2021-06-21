@@ -1,0 +1,12 @@
+{
+  "name": "whos-there",
+  "displayName": "whos-there",
+  "expo": {
+    "name": "whos-there",
+    "slug": "whos-there",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
