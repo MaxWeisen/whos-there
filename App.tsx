@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import FavList from "./components/favorites";
 import Maps from "./components/map";
 
+
 export default function App() {
   return (
     <View style={styles.container}>
