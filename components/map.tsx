@@ -1,5 +1,5 @@
 import * as React from "react";
-import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
+import MapView from "react-native-maps";
 import {
   Platform,
   StyleSheet,
@@ -15,9 +15,17 @@ const screenWidth =
   Dimensions.get("window").width - Dimensions.get("window").width / 16;
 
 export default function Maps() {
+
+
+
   return (
     <View style={styles.container}>
-      <MapView style={styles.map} provider="google"></MapView>
+      <MapView 
+        style={styles.map} 
+        showsUserLocation={true}
+        followsUserLocation={true}
+        maxZoomLevel={10}
+        ></MapView>
     </View>
   );
 }
