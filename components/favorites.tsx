@@ -6,19 +6,30 @@ import {
   View,
   TouchableOpacity,
   Dimensions,
+  ScrollView,
 } from "react-native";
+import Card from "./Card";
 const axios = require('axios');
 
 
 export default function FavList() {
 
   // This is where we will make a get request to the backend to check for user favorites and cache them
+  const data = [];
 
+  for (let i = 0; i < 20; i++) {
+    data.push({
+      location: `Location ${i}`,
+      description: `Description ${i}`
+    })
+  }
 
   return (
-    <View style={styles.container}>
-      <Text>This is a list of FAV</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      {data.map(el => {
+        return <Card location={el.location} description={el.description}/>
+      })}
+    </ScrollView>
   );
 }
 
@@ -27,5 +38,6 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: "4%",
     backgroundColor: "#FFF9E2",
+    minWidth: "95%",
   },
 });

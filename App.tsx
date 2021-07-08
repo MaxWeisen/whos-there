@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import FavList from "./components/favorites";
-import Maps from "./components/map";
+import FavList from "./components/Favorites";
+import Maps from "./components/Map";
 
 
 export default function App() {
