@@ -27,7 +27,7 @@ export default function FavList() {
   return (
     <ScrollView style={styles.container}>
       {data.map(el => {
-        return <Card location={el.location} description={el.description}/>
+        return <Card key={el.description} location={el.location} description={el.description}/>
       })}
     </ScrollView>
   );
@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
     margin: "4%",
     backgroundColor: "#FFF9E2",
     minWidth: "95%",
+    borderRadius: 10,
   },
 });
